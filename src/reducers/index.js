@@ -1,8 +1,9 @@
-export default (state, action) => {
-  switch (action.type) {
-    case "":
-      return;
-    default:
-      return state;
-  }
-};
+import users from "./users";
+import contacts from "./contacts";
+
+import { combineReducers } from "redux";
+
+export default combineReducers({
+  users,
+  contacts
+});
