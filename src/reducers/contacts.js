@@ -1,9 +1,12 @@
 import { contacts } from "../static-data";
+import { DELETE_CONTACT } from "../actions/constants/action-types";
 
 export default (state = { contacts }, action) => {
   switch (action.type) {
-    case "":
-      return;
+    case DELETE_CONTACT:
+      const contactId = action.payload;
+      const { [contactId]: deleted, ...newState } = state;
+      return newState;
     default:
       return state;
   }
