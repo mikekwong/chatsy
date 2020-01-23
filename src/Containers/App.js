@@ -7,7 +7,6 @@ import _ from "lodash";
 
 const App = () => {
   const { contacts, user, activeUserID } = store.getState();
-  console.log(user);
   return (
     <div className="App">
       <Sidebar contacts={_.values(contacts)} />

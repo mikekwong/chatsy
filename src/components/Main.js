@@ -3,12 +3,12 @@ import "./Main.css";
 import Empty from "../components/Empty";
 import ChatWindow from "../components/ChatWindow";
 
-const Main = ({ user, activeUserId }) => {
+const Main = ({ user, activeUserID }) => {
   const renderMainContent = () => {
-    if (!activeUserId) {
-      return <Empty user={user} activeUserId={activeUserId} />;
+    if (!activeUserID) {
+      return <Empty user={user} activeUserID={activeUserID} />;
     } else {
-      return <ChatWindow activeUserId={activeUserId} />;
+      return <ChatWindow activeUserID={activeUserID} />;
     }
   };
   return <main className="Main">{renderMainContent()}</main>;
